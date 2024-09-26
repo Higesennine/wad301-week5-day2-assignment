@@ -17,9 +17,12 @@ export const userSlice = createSlice({
     reducers: {
         increment: (state: State) => {
             state.age += 1
+        },
+        decrement: (state: State) => {
+            state.age -= 1
         }
     }
 })
 
-export const {increment} = userSlice.actions;
+export const {increment, decrement} = userSlice.actions;
 export const userReducer = userSlice.reducer;

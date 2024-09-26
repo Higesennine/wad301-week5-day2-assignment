@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../app/hook"
-import { increment } from "../features/user/userSlice";
+import { decrement, increment } from "../features/user/userSlice";
 
 export default function User() {
 
@@ -15,6 +15,7 @@ export default function User() {
     <div>User
         <p>Age of {firstName}{" "}{lastName}: {age}</p>
         <button onClick={() => dispatch(increment())}>+</button>
+        <button onClick={() => dispatch(decrement())}>-</button>
     </div>
   )
 }
